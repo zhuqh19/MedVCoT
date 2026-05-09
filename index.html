@@ -300,7 +300,43 @@
 </section>
 
 
+<!-- Methodology. -->
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+    <h2 class="title is-3">Methodology</h2>
 
+    <div class="content has-text-justified">
+      <p>
+        Medical Visual Question Answering (Medical VQA) stands as a cornerstone of AI-assisted diagnosis, 
+        which needs both high accuracy and rigorous interpretability. The “black-box” diagnosis made to a patient, 
+        although it may be correct, will be unconvincing without verifiable visual evidence. However, 
+        current state-of-the-art Medical Vision-Language Models (VLMs) come to a fundamental bottleneck: the modality gap. 
+        When continuous and fine-grained visual signals (such as the boundaries of a lesion or texture gradients) are forcibly 
+        projected into a discrete textual space for reasoning, there is a lot of visual evidence ignored inevitably. 
+        This information loss is particularly detrimental in clinical practice, where the subtlest cues in visual content can matter to diagnosis. 
+        In that connection, the lack of direct visualization of reasoning has been a barrier to the application of medical AI systems applied to clinical scenarios.
+      </p>
+    <figure class="image">
+      <img src="./static/images/introduction.png" alt="Overview of MedVCoT methodology">
+    </figure>
+      <p>
+        The framework follows a progressive training strategy, including medical feature
+        alignment, latent visual reasoning learning, and instruction tuning for complex clinical
+        scenarios. During inference, MedVCoT can generate both textual answers and pixel-level
+        visual evidence, making the reasoning process more transparent and clinically grounded.
+      </p>
+    </div>
+
+    <figure class="image">
+      <img src="./static/images/training.png" alt="Training Pipeline of MedVCoT methodology">
+    </figure>
+
+    <p class="has-text-centered">
+      <strong>Figure:</strong> Overview of the proposed MedVCoT methodology.
+    </p>
+  </div>
+</div>
+<!--/ Methodology. -->
 
 
 <!-- <section class="section" id="BibTeX">
@@ -334,13 +370,6 @@
             This website is licensed under a <a rel="license"
                                                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
           </p>
         </div>
       </div>

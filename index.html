@@ -91,23 +91,23 @@
           <h1 class="title is-1 publication-title">MedVCoT: Bridging Modality Gap in Medical VQA through Latent Visual Reasoning</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Bo Xu</a><sup>1</sup>,</span>
+              <a href="">Bo Xu</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Quanhao Zhu</a><sup>1</sup>,</span>
+              <a href="https://scholar.google.com/citations?user=R3bxC7gAAAAJ&hl=zh-CN&oi=sra">Quanhao Zhu</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Boling Zhu</a><sup>1</sup>,
+              <a href="">Boling Zhu</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Chenyuan Wang</a><sup>1</sup>,
+              <a href="">Chenyuan Wang</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Liang Zhao</a><sup>1,*</sup>,
+              <a href="">Liang Zhao</a><sup>1,*</sup>,
             </span>
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Hongfei Lin</a><sup>1</sup>,
+              <a href=">Hongfei Lin</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Feng Xia</a><sup>2</sup>
+              <a href="">Feng Xia</a><sup>2</sup>
             </span>
           </div>
 
@@ -119,16 +119,16 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <!-- <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+              <span class="link-block">
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
                   <span>Paper</span>
                 </a>
-              </span> -->
-              <span class="link-block">
+              </span>
+              <!-- <span class="link-block">
                 <a href="https://github.com/zhuqh19/MedVCoT"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -136,7 +136,7 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Video Link. -->
               <!-- <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
@@ -258,31 +258,27 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            With the rising demand for trustworthy AI in clinical practice, strong interpretability is 
+            now a critical requirement as well as accuracy. However, the modality gap for medical visual 
+            question answering is quite severe when continuous visual signals are forcibly projected into 
+            discrete text space for reasoning, and the loss of necessary diagnostic information leads to 
+            low precision and black-box opacity.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            To address this problem, we propose MedVCoT, which incorporates latent visual reasoning into 
+            the medical visual question answering(VQA) domain. Rather than merely integrating modules, 
+            MedVCoT utilizes the specialized expertise of MedSAM to train a large vision-language model 
+            so that it can autonomously generate consistent and continuous latent visual tokens within Visual 
+            Chain-of-Thought. This mechanism forces the model to explicitly "see" the lesion in the latent 
+            space before formulating a textual diagnosis, ensuring answers are causally rooted in verifiable 
+            visual evidence rather than statistical hallucination. We achieve this through a progressive 3-stage 
+            training procedure: medical feature alignment, visual reasoning learning by utilizing latent tokens 
+            generated, and instruction tuning for complex clinical scenarios.
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Extensive experiments show that MedVCoT can achieve state-of-the-art performance on multiple benchmarks, 
+            outperforming other methods by large margins. Meanwhile, it provides pixel-level segmentation masks to 
+            validate its diagnostic reasoning.
           </p>
         </div>
       </div>

@@ -317,13 +317,19 @@
         In that connection, the lack of direct visualization of reasoning has been a barrier to the application of medical AI systems applied to clinical scenarios.
       </p>
     <figure class="image">
-      <img src="./static/images/introduction.png" alt="Overview of MedVCoT methodology">
+      <img src="./static/images/Introduction.png" alt="Overview of MedVCoT methodology">
     </figure>
+    <p class="has-text-centered">
+      <strong>Figure:</strong> Overview of the proposed MedVCoT methodology.
+    </p>
       <p>
-        The framework follows a progressive training strategy, including medical feature
-        alignment, latent visual reasoning learning, and instruction tuning for complex clinical
-        scenarios. During inference, MedVCoT can generate both textual answers and pixel-level
-        visual evidence, making the reasoning process more transparent and clinically grounded.
+        To address these challenges, we propose MedVCoT, the first approach to incorporate a Visual Chain-of-Thought (Visual CoT) into medical VQA. 
+        Different from traditional methods, which only perform reasoning in the text space, our model generates a sequence of continuous latent visual 
+        tokens autonomously within a separate thought horizon (denoted as \texttt{<think>} tags) before answering. These tokens act as a bridge between 
+          linguistic reasoning and visual perception. In particular, under the guidance of the specialized medical visual expert MedSAM, the VLM learns 
+          to generate these tokens as an intermediate reasoning output. These generated tokens can be further mapped with a projector to trigger MedSAM 
+          to decode explicit segmentation masks. This mechanism forces the model to “see” and localize the lesion in latent space before “speaking” the 
+          diagnosis so as to ensure that answers are causally predicated on verifiable visual evidence.
       </p>
     </div>
 
@@ -332,7 +338,7 @@
     </figure>
 
     <p class="has-text-centered">
-      <strong>Figure:</strong> Overview of the proposed MedVCoT methodology.
+      <strong>Figure:</strong> Training Pipeline of the proposed MedVCoT methodology.
     </p>
   </div>
 </div>

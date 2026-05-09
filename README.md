@@ -11,29 +11,32 @@
 
 We propose MedVCoT, the first approach to incorporate a Visual Chain-of-Thought (Visual CoT) into medical VQA. Different from traditional methods, which only perform reasoning in the text space, our model generates a sequence of continuous latent visual tokens autonomously within a separate thought horizon (denoted as \texttt{<think>} tags) before answering. These tokens act as a bridge between linguistic reasoning and visual perception. In particular, under the guidance of the specialized medical visual expert MedSAM, the VLM learns to generate these tokens as an intermediate reasoning output. These generated tokens can be further mapped with a projector to trigger MedSAM to decode explicit segmentation masks. This mechanism forces the model to “see” and localize the lesion in latent space before “speaking” the diagnosis so as to ensure that answers are causally predicated on verifiable visual evidence.
 
+<p align="center">
+  <img src="./static/images/Introduction.png" width="34%">
+</p>
 ---
 
 ## 📊 Performance
 
 ### Main Result
 <p align="center">
-  <img src="./statics/images/main_result.png" width="34%">
+  <img src="./static/images/main_result.png" width="34%">
 </p>
 
 
 ### Abalation study
 <p align="center">
-  <img src="./statics/images/ablation.png" width="90%">
+  <img src="./static/images/ablation.png" width="90%">
 </p>
 
 ### Fine-grained capability analysis
 <p align="center">
-  <img src="./statics/images/radar.png" width="45%">
+  <img src="./static/images/radar.png" width="45%">
 </p>
 
 ### Case study
 <p align="center">
-  <img src="./statics/images/case_study.png" width="45%">
+  <img src="./static/images/case_study.png" width="45%">
 </p>
 
 ---

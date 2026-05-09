@@ -14,7 +14,6 @@ We propose MedVCoT, the first approach to incorporate a Visual Chain-of-Thought 
 <p align="center">
   <img src="./static/images/Introduction.png" width="90%">
 </p>
----
 
 ## 📊 Performance
 

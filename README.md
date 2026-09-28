@@ -55,10 +55,21 @@ We propose MedVCoT, the first approach to incorporate a Visual Chain-of-Thought 
 If you find this work useful, please cite:
 
 ```bibtex
-@article{xumedvcot,
-  title={MedVCoT: Bridging the Modality Gap in Medical VQA Through Latent Visual Reasoning},
-  author={Xu, Bo and Zhu, Quanhao and Zhu, Boling and Wang, Chenyuan and Zhao, Liang and Lin, Hongfei and Xia, Feng}
+@inproceedings{ijcai2026p214,
+  title     = {MedVCoT: Bridging the Modality Gap in Medical VQA Through Latent Visual Reasoning},
+  author    = {Xu, Bo and Zhu, Quanhao and Zhu, Boling and Wang, Chenyuan and Zhao, Liang and Lin, Hongfei and Xia, Feng},
+  booktitle = {Proceedings of the Thirty-Fifth International Joint Conference on
+               Artificial Intelligence, {IJCAI-26}},
+  publisher = {International Joint Conferences on Artificial Intelligence Organization},
+  editor    = {Diego Calvanese},
+  pages     = {1920--1928},
+  year      = {2026},
+  month     = {8},
+  note      = {Main Track},
+  doi       = {10.24963/ijcai.2026/214},
+  url       = {https://doi.org/10.24963/ijcai.2026/214},
 }
+
 ```
 
 ---
